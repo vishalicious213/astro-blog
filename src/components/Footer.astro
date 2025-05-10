@@ -10,9 +10,6 @@ const username = "vishalicious213"
 
     <style>
         footer {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 1rem;
             margin-top: 2rem;
             padding: 1rem;
             background: navy;
@@ -36,6 +33,14 @@ const username = "vishalicious213"
 
         a:hover {
             background: #f1f5f9;;
+        }
+
+        @media screen and (min-width: 500px) {
+            footer {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 1rem;
+            }
         }
     </style>
 </footer>
