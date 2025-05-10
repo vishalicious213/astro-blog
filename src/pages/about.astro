@@ -7,6 +7,9 @@ const identity = {
     hobbies: ["bass", "metal", "coding"]
 }
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"]
+const happy = true
+const finished = false
+const goal = 3
 ---
 
 <html lang="en">
@@ -23,20 +26,30 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"]
         <a href="/blog">Blog</a>
 
 		<h1>{pageTitle}</h1>
-        <p>Building out an Astro site to learn its flow. Then, I'll go through the SSG process & learn how to render server-side generated content. Then, I'll see how to do it with WordPress as a backend.</p>
-        <p>With those in place, I can generate headless SSG WP websites, with regard to pages & blog posts. Then, I'll figure out WooCommerce & we'll have  viable option for freelancing with static sites, blog sites & ecommerce sites.</p>
+        <main>
+            <p>Building out an Astro site to learn its flow. Then, I'll go through the SSG process & learn how to render server-side generated content. Then, I'll see how to do it with WordPress as a backend.</p>
+            <p>With those in place, I can generate headless SSG WP websites, with regard to pages & blog posts. Then, I'll figure out WooCommerce & we'll have  viable option for freelancing with static sites, blog sites & ecommerce sites.</p>
+        </main>
 
-        <p>Here are some facts about me, to test out variables in this page's frontmatter:</p>
-        <ul>
-            <li>My name is {identity.firstName}</li>
-            <li>I live in {identity.country} and work as a {identity.occupation}</li>
-            {identity.hobbies.length >= 2 &&
-             <li>Two of my hobbies are: {identity.hobbies[0]} & {identity.hobbies[1]}</li>}
-        </ul>
+        <section>
+            <p>Here are some facts about me, to test out variables in this page's frontmatter:</p>
+            <ul>
+                <li>My name is {identity.firstName}</li>
+                <li>I live in {identity.country} and work as a {identity.occupation}</li>
+                {identity.hobbies.length >= 2 &&
+                <li>Two of my hobbies are: {identity.hobbies[0]} & {identity.hobbies[1]}</li>}
+            </ul>
 
-        <p>My skills are:</p>
-        <ul>
-            {skills.map(skill => <li>{skill}</li>)}
-        </ul>
+            <p>My skills are:</p>
+            <ul>
+                {skills.map(skill => <li>{skill}</li>)}
+            </ul>
+        </section>
+
+        <section>
+            {happy && <p>I am happy to be learning Astro!</p>}
+            {finished && <p>I finished this tutorial!</p>}
+            {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+        </section>
 	</body>
 </html>
