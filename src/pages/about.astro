@@ -25,6 +25,11 @@ const goal = 3
                 color: purple;
                 font-size: 4rem;
             }
+
+            .skill {
+                color: green;
+                font-weight: bold;
+            }
         </style>
 	</head>
 	<body>
@@ -49,7 +54,7 @@ const goal = 3
 
             <p>My skills are:</p>
             <ul>
-                {skills.map(skill => <li>{skill}</li>)}
+                {skills.map(skill => <li class="skill">{skill}</li>)}
             </ul>
         </section>
 
