@@ -1,8 +1,5 @@
 ---
-import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
-import '../styles/global.css'
-
+import BaseLayout from "../layouts/BaseLayout.astro"
 const pageTitle = "Astro Blog Test - About"
 const identity = {
     firstName: "Vish",
@@ -19,60 +16,43 @@ const fontWeight = "bold"
 const textCase = "uppercase"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
+<BaseLayout pageTitle={pageTitle}>
+    <main>
+        <h1>{pageTitle}</h1>
+        <p>Building out an Astro site to learn its flow. Then, I'll go through the SSG process & learn how to render server-side generated content. Then, I'll see how to do it with WordPress as a backend.</p>
+        <p>With those in place, I can generate headless SSG WP websites, with regard to pages & blog posts. Then, I'll figure out WooCommerce & we'll have  viable option for freelancing with static sites, blog sites & ecommerce sites.</p>
+    </main>
 
-        <style define:vars={{skillColor, fontWeight, textCase}}>
-            main, section {
-                padding: 1rem;
-            }
+    <section>
+        <p>Here are some facts about me, to test out variables in this page's frontmatter:</p>
+        <ul>
+            <li>My name is {identity.firstName}</li>
+            <li>I live in {identity.country} and work as a {identity.occupation}</li>
+            {identity.hobbies.length >= 2 &&
+            <li>Two of my hobbies are: {identity.hobbies[0]} & {identity.hobbies[1]}</li>}
+        </ul>
 
-            .skill {
-                color: var(--skillColor);
-                font-weight: var(--fontWeight);
-                text-transform: var(--textCase);
-            }
-        </style>
-	</head>
-	<body>
-        <Header />
+        <p>My skills are:</p>
+        <ul>
+            {skills.map(skill => <li class="skill">{skill}</li>)}
+        </ul>
+    </section>
 
-        <main>
-            <h1>{pageTitle}</h1>
-            <p>Building out an Astro site to learn its flow. Then, I'll go through the SSG process & learn how to render server-side generated content. Then, I'll see how to do it with WordPress as a backend.</p>
-            <p>With those in place, I can generate headless SSG WP websites, with regard to pages & blog posts. Then, I'll figure out WooCommerce & we'll have  viable option for freelancing with static sites, blog sites & ecommerce sites.</p>
-        </main>
+    <section>
+        {happy && <p>I am happy to be learning Astro!</p>}
+        {finished && <p>I finished this tutorial!</p>}
+        {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+    </section>
+</BaseLayout>
 
-        <section>
-            <p>Here are some facts about me, to test out variables in this page's frontmatter:</p>
-            <ul>
-                <li>My name is {identity.firstName}</li>
-                <li>I live in {identity.country} and work as a {identity.occupation}</li>
-                {identity.hobbies.length >= 2 &&
-                <li>Two of my hobbies are: {identity.hobbies[0]} & {identity.hobbies[1]}</li>}
-            </ul>
+<style define:vars={{skillColor, fontWeight, textCase}}>
+    main, section {
+        padding: 1rem;
+    }
 
-            <p>My skills are:</p>
-            <ul>
-                {skills.map(skill => <li class="skill">{skill}</li>)}
-            </ul>
-        </section>
-
-        <section>
-            {happy && <p>I am happy to be learning Astro!</p>}
-            {finished && <p>I finished this tutorial!</p>}
-            {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
-        </section>
-
-        <Footer />
-
-        <script>
-			import "../scripts/menu"
-		</script>
-	</body>
-</html>
+    .skill {
+        color: var(--skillColor);
+        font-weight: var(--fontWeight);
+        text-transform: var(--textCase);
+    }
+</style>
