@@ -4,15 +4,18 @@ html {
 }
 
 body {
-    margin: 0 auto;
+    margin: 0;
     width: 100%;
-    max-width: 80ch;
     padding: 0;
     line-height: 1.5;
 }
 
 * {
     box-sizing: border-box;
+}
+
+main {
+    padding: 1rem;
 }
 
 h1 {
