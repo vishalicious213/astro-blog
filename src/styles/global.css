@@ -32,8 +32,9 @@ h1 {
 /* nav styles */
 
 .hamburger {
-    padding-right: 20px;
     cursor: pointer;
+    position: absolute;
+    right: 0;
 }
 
 .hamburger .line {
@@ -41,15 +42,20 @@ h1 {
     width: 40px;
     height: 5px;
     margin-bottom: 10px;
-    background-color: #ff9776;
+    background-color: var(--background);
 }
 
 .nav-links {
     width: 100%;
-    background: var(--background2);
     display: none;
     margin: 0;
-    border-bottom: 2px solid var(--background);
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    background-color: var(--lightText);
+    border-bottom: 1px solid var(--background2);
+    border-right: 1px solid var(--background2);
 }
 
 .nav-links a {
@@ -60,13 +66,13 @@ h1 {
     font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: var(--lightText);
+    color: var(--background2);
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-    background: var(--lightText);
-    color: var(--background);
+    background: var(--background);
+    color: var(--lightText);
 }
 
 .expanded {
@@ -79,11 +85,21 @@ h1 {
         position: static;
         width: auto;
         text-align: center;
+        background: var(--background2);
+        border-bottom: 2px solid var(--background);
+        border-right: none;
     }
 
     .nav-links a {
         display: inline-block;
         padding: 15px 20px;
+        color: var(--lightText);
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus {
+        background: var(--lightText);
+        color: var(--background);
     }
 
     .hamburger {
