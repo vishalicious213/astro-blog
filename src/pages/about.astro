@@ -25,5 +25,18 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"]
 		<h1>{pageTitle}</h1>
         <p>Building out an Astro site to learn its flow. Then, I'll go through the SSG process & learn how to render server-side generated content. Then, I'll see how to do it with WordPress as a backend.</p>
         <p>With those in place, I can generate headless SSG WP websites, with regard to pages & blog posts. Then, I'll figure out WooCommerce & we'll have  viable option for freelancing with static sites, blog sites & ecommerce sites.</p>
+
+        <p>Here are some facts about me, to test out variables in this page's frontmatter:</p>
+        <ul>
+            <li>My name is {identity.firstName}</li>
+            <li>I live in {identity.country} and work as a {identity.occupation}</li>
+            {identity.hobbies.length >= 2 &&
+             <li>Two of my hobbies are: {identity.hobbies[0]} & {identity.hobbies[1]}</li>}
+        </ul>
+
+        <p>My skills are:</p>
+        <ul>
+            {skills.map(skill => <li>{skill}</li>)}
+        </ul>
 	</body>
 </html>
