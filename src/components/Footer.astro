@@ -4,15 +4,31 @@ const username = "vishalicious213"
 ---
 
 <footer>
-    <ul>
-        <li>Learn more about my projects on <a href={`https://www.${platform}.com/${username}`}>{platform}</a>!</li>
-        <li>Follow me on <a href={`https://bsky.app/profile/${username}.bsky.social`}>Bluesky</a>!</li>
-        <li>Follow me on <a href={`https://www.linkedin.com/in/vish213/`}>LinkedIn</a>!</li>
-    </ul>
+    <p>See my projects on <a href={`https://www.${platform}.com/${username}`}>{platform}</a></p>
+    <p>Follow me on <a href={`https://bsky.app/profile/${username}.bsky.social`}>Bluesky</a></p>
+    <p>Connect with me on <a href={`https://www.linkedin.com/in/vish213/`}>LinkedIn</a></p>
 
     <style>
+        footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding: 1rem;
+            background: navy;
+            color: white;
+            text-align: center;
+        }
         li {
             font-size: .9rem;
+        }
+
+        a {
+            padding: 0.5rem 1rem;
+            background: white;
+            color: navy;
+            font-weight: bold;
+            text-decoration: none;
         }
     </style>
 </footer>

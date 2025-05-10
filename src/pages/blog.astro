@@ -14,18 +14,27 @@ const pageTitle = "Astro Blog Test - Blog"
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 	</head>
+
 	<body>
         <Navigation />
 
-		<h1>{pageTitle}</h1>
-        <p>Blog posts from the Astro tutorial will go on this page.</p>
+		<main>
+            <h1>{pageTitle}</h1>
+            <p>Blog posts from the Astro tutorial will go on this page.</p>
 
-        <ul>
-            <li><a href="/posts/post-1">Post 1</a></li>
-            <li><a href="/posts/post-2">Post 2</a></li>
-            <li><a href="/posts/post-3">Post 3</a></li>
-        </ul>
+            <ul>
+                <li><a href="/posts/post-1">Post 1</a></li>
+                <li><a href="/posts/post-2">Post 2</a></li>
+                <li><a href="/posts/post-3">Post 3</a></li>
+            </ul>
+        </main>
 
         <Footer />
 	</body>
+
+    <style>
+        main {
+            padding: 1rem;
+        }
+    </style>
 </html>

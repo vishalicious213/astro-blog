@@ -28,9 +28,8 @@ const textCase = "uppercase"
 		<title>{pageTitle}</title>
 
         <style define:vars={{skillColor, fontWeight, textCase}}>
-            h1 {
-                color: purple;
-                font-size: 4rem;
+            main, section {
+                padding: 1rem;
             }
 
             .skill {
@@ -43,8 +42,8 @@ const textCase = "uppercase"
 	<body>
         <Navigation />
 
-		<h1>{pageTitle}</h1>
         <main>
+            <h1>{pageTitle}</h1>
             <p>Building out an Astro site to learn its flow. Then, I'll go through the SSG process & learn how to render server-side generated content. Then, I'll see how to do it with WordPress as a backend.</p>
             <p>With those in place, I can generate headless SSG WP websites, with regard to pages & blog posts. Then, I'll figure out WooCommerce & we'll have  viable option for freelancing with static sites, blog sites & ecommerce sites.</p>
         </main>
