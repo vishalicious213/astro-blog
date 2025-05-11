@@ -7,8 +7,8 @@ image:
     alt: "The Astro logo on a dark background with rainbow rays."
 pubDate: 2025-05-10
 tags: ["astro", "learning in public", "setbacks", "community"]
-layout: ../../layouts/BaseLayout.astro
+layout: ../../layouts/MarkdownPostLayout.astro
 ---
-#### [Return to blog page](../blog)
+*Published on: 2025-05-10*
 
 It wasn't always smooth sailing, but I'm enjoying building with Astro. And, the [Discord community](https://astro.build/chat) is really friendly and helpful!
