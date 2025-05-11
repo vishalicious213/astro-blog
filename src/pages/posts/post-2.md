@@ -26,4 +26,4 @@ Its interesting that we can write posts using Markdown & then send them off into
 
 Lets add in a picture:
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Godzilla_%281954%29.jpg/1200px-Godzilla_%281954%29.jpg)
+<img class="post-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Godzilla_%281954%29.jpg/1200px-Godzilla_%281954%29.jpg" alt="Godzilla">
