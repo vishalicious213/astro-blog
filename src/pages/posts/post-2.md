@@ -9,6 +9,7 @@ pubDate: 2025-05-09
 tags: ["astro", "blogging", "learning in public", "successes"]
 layout: ../../layouts/BaseLayout.astro
 ---
+#### [Return to blog page](../blog)
 
 Published on: 2025-05-09
 

@@ -11,6 +11,8 @@ layout: ../../layouts/BaseLayout.astro
 ---
 # My First Blog Post
 
+#### [Return to blog page](../blog)
+
 Published on: 2025-05-08
 
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.

@@ -9,4 +9,6 @@ pubDate: 2025-05-10
 tags: ["astro", "learning in public", "setbacks", "community"]
 layout: ../../layouts/BaseLayout.astro
 ---
+#### [Return to blog page](../blog)
+
 It wasn't always smooth sailing, but I'm enjoying building with Astro. And, the [Discord community](https://astro.build/chat) is really friendly and helpful!
