@@ -1,8 +1,10 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro"
-const pageTitle = "Astro Blog Test- Tag Index"
+const allPosts = Object.values(import.meta.glob('../posts/*.md', { eager: true }))
+const tags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())]
+const pageTitle = "Astro Blog Test - Tag Index"
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    
+
 </BaseLayout>
