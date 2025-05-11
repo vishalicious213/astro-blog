@@ -7,6 +7,7 @@ image:
     alt: 'The Astro logo on a dark background with a pink glow.'
 pubDate: 2022-07-01
 tags: ["astro", "blogging", "learning in public"]
+layout: ../../layouts/BaseLayout.astro
 ---
 # My First Blog Post
 
