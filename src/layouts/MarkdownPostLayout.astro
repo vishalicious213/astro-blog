@@ -18,10 +18,10 @@ const { frontmatter } = Astro.props
     <Header />
     <main>
         <slot />
-        <a href="/blog">Return to blog page</a>
         <div class="tags">
             {tags.map(tag => <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>)}
         </div>
+        <a href="/blog">Return to blog page</a>
     </main>
     <Footer />
 </body>
@@ -34,7 +34,7 @@ const { frontmatter } = Astro.props
     .tags {
         display: flex;
         flex-wrap: wrap;
-        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     .tag {
