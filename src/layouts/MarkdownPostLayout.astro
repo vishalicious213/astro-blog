@@ -1,7 +1,22 @@
 ---
-const { frontmatter } = Astro.props;
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import "../styles/global.css"
+const { frontmatter } = Astro.props
 ---
-<meta charset="utf-8" />
-<h1>{frontmatter.title}</h1>
-<p>Written by {frontmatter.author}</p>
-<slot />
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{frontmatter.title}</title>
+</head>
+
+<body>
+    <Header />
+    <main>
+        <slot />
+        <a href="/blog">Return to blog page</a>
+    </main>
+    <Footer />
+</body>
