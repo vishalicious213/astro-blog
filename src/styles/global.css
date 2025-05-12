@@ -60,16 +60,16 @@ h1 {
 }
 
 .nav-links {
-    width: 100%;
+    width: 30%;
     display: none;
     margin: 0;
     /* z-index: 1; */
     position: fixed;
     top: 0;
     right: 40px;
-    background-color: var(--lightText);
-    border-bottom: 1px solid var(--background2);
-    border-right: 1px solid var(--background2);
+    background-color: var(--background2);
+    border-bottom: 1px solid var(--background);
+    border-right: 1px solid var(--background);
 }
 
 .nav-links a {
@@ -80,7 +80,7 @@ h1 {
     font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: var(--background2);
+    color: var(--lightText);
 }
 
 .nav-links a:hover,
