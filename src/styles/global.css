@@ -63,8 +63,8 @@ h1 {
     width: 100%;
     display: none;
     margin: 0;
-    z-index: 1;
-    position: absolute;
+    /* z-index: 1; */
+    position: fixed;
     top: 0;
     right: 40px;
     background-color: var(--lightText);
@@ -96,8 +96,9 @@ h1 {
 @media screen and (min-width: 636px) {
     .nav-links {
         display: block;
-        position: static;
-        width: auto;
+        position: fixed;
+        right: 0;
+        width: 100%;
         text-align: center;
         background: var(--background2);
         border-bottom: 2px solid var(--background);
