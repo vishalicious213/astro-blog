@@ -1,9 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
+import Greeting from "../components/Greeting"
 const pageTitle = "Astro Blog Test"
 ---
 
 <BaseLayout pageTitle={pageTitle}>
 	<h2>Testing Astro capabilities</h2>
+	<Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there"]} />
 	<p>This content & the line above it was sent to the BaseLayout via the slot component. It injects child content into any named component when that content is included within the component's opening & closing tags.</p>
 </BaseLayout>
