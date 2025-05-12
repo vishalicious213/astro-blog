@@ -10,12 +10,12 @@ html {
 }
 
 html.dark {
-    background-color: #0d0950;
-    color: #fff;
+    background-color: #191f24;
+    color: #818589;
 }
 
 .dark .nav-links a {
-    color: #fff;
+    color: #d3d3d3;
 }
 
 body {
