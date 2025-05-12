@@ -7,7 +7,6 @@ image:
     alt: "The Astro logo on a dark background with rainbow rays."
 pubDate: 2025-05-10
 tags: ["astro", "learning in public", "setbacks", "community"]
-layout: ../../layouts/MarkdownPostLayout.astro
 ---
 *Published on: 2025-05-10*
 
