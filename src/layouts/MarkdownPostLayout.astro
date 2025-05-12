@@ -29,7 +29,8 @@ const { frontmatter } = Astro.props
 
 <style>
     a {
-        color: #00539F;
+        color: var(--background);
+        text-decoration: none;
     }
 
     .tags {
@@ -44,6 +45,6 @@ const { frontmatter } = Astro.props
         border-radius: .5rem;
         padding: .5rem 1rem;
         font-size: .9rem;
-        background-color: #F8FCFD;
+        background-color: var(--lightText);
     }
 </style>
