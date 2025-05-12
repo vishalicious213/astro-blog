@@ -53,6 +53,10 @@ h1 {
     max-width: 800px;
 }
 
+.post-link a {
+    color: var(--background2)
+}
+
 /* nav styles */
 
 .hamburger {
